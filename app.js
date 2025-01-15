@@ -38,7 +38,6 @@ passport.use(
         if (!match) {
           return done(null, false, { message: "Incorrect email or password" });
         }
-
         // Authentication successful
         return done(null, user);
       } catch (err) {
@@ -62,7 +61,7 @@ passport.deserializeUser(async (id, done) => {
       id,
     ]);
     const user = rows[0];
-
+    console.log(user);
     done(null, user);
   } catch (err) {
     done(err);
@@ -86,6 +85,12 @@ app.use(
   })
 );
 app.use(passport.session());
+
+//currentUser middleware
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
 
 //url encoding middleware (it was set to false in the authentication lesson, need to confirm that)
 app.use(express.urlencoded({ extended: true }));

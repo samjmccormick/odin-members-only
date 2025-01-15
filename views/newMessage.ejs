@@ -6,9 +6,9 @@
   </head>
   <body>
     <h1>hello world!</h1>
-    <a href="/sign-up">Sign Up Page </a>
-    <% if (currentUser) {%>
-    <h1>Welcome Back <%= currentUser.firstname %></h1>
+    <a href="/m">Sign Up Page </a>
+    <% if (locals.user) {%>
+    <h1>Welcome Back <%= user.firstname %></h1>
     <a href="/log-out">Log Out</a>
     <% } else { %>
     <h1>please log in</h1>
@@ -19,6 +19,5 @@
       <input id="password" name="password" type="password" />
       <button>Log In</button>
     </form>
-    <%}%>
   </body>
 </html>
