@@ -11,3 +11,5 @@ By this point, anyone who comes to the site should be able to see a list of all 
 When you’re satisfied with your work, deploy your project on your chosen PaaS (list of PaaS providers from the Deployment lesson) and share it below!
 
 1. look at adding connect-pg-simple to store postgres session information (I think to automatically connect)
+2. look at adding async handler
+3. validation as well
