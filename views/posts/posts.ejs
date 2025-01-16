@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <h1>Welcome Back <%= currentUser.firstname %></h1>
+    <a href="/log-out">Log Out</a>
+    <% if (!currentUser.member) { %>
+    <a href="/join">Join Club</a>
+    <% messages.forEach((message) => { %> <%- include('post', {message:
+    message}) %> <% }) %> <% } else { %>
+    <div>Staus: Member</div>
+    <% messages.forEach((message) => { %> <%- include('memberPost', {message:
+    message}) %> <% }) %> <%}%>
+    <a href="/posts/new" type="GET">New Post</a>
+  </body>
+</html>

@@ -9,8 +9,10 @@
     <a href="/sign-up">Sign Up Page </a>
     <% if (currentUser) {%>
     <h1>Welcome Back <%= currentUser.firstname %></h1>
+    <% if (!currentUser.member) { %>
+    <a href="/join">Join Club</a>
     <a href="/log-out">Log Out</a>
-    <% } else { %>
+    <% } %> <% } else { %>
     <h1>please log in</h1>
     <form action="/log-in" method="POST">
       <label for="email">Email</label>

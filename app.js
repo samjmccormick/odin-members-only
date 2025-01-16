@@ -61,7 +61,6 @@ passport.deserializeUser(async (id, done) => {
       id,
     ]);
     const user = rows[0];
-    console.log(user);
     done(null, user);
   } catch (err) {
     done(err);
@@ -102,17 +101,20 @@ app.use(express.static(assetsPath));
 // router links
 const indexRouter = require("./routes/indexRouter");
 const signupRouter = require("./routes/signupRouter");
+const postsRouter = require("./routes/postsRouter");
+const joinRouter = require("./routes/joinRouter");
 
 // routers
 app.use("/", indexRouter);
 app.use("/sign-up", signupRouter);
-app.get("/error", (req, res) => res.render("error"));
+app.use("/posts", postsRouter);
+app.use("/join", joinRouter);
 
 app.post(
   "/log-in",
   passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/error",
+    successRedirect: "/posts",
+    failureRedirect: "/",
   })
 );
 
