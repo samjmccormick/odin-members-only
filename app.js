@@ -47,7 +47,7 @@ passport.use(
     }
   )
 );
-
+//update
 //receives user object from sucecssful login and stores it's id property in session data
 passport.serializeUser((user, done) => {
   done(null, user.id);
