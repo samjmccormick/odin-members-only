@@ -20,7 +20,9 @@
         <h1>Posts</h1>
         <div class="row justify-content-center align-items-center">
           <h2 class="col">Welcome Back <b> <%= currentUser.firstname %></b></h2>
-          <a class="btn btn-danger col-2" href="/log-out">Log Out</a>
+          <div class="col-2 log-out">
+            <a class="btn btn-danger" href="/log-out">Log Out</a>
+          </div>
         </div>
       </div>
       <div class="container m-3 p-3" id="posts">

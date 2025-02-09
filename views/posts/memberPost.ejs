@@ -1,8 +1,10 @@
 <div class="container mb-1">
   <hr class="solid" />
-  <div class="row"><%= message.text %></div>
   <div class="row">
-    <div class="col"><%= message.username %></div>
-    <div class="col"><%= message.timestamp %></div>
+    <div class="col-3 text-center" id="user">
+      <div class="row"><b><%= message.username %></b></div>
+      <div class="row" id="timestamp"><i><%= message.timestamp %></i></div>
+    </div>
+    <div class="col"><%= message.text %></div>
   </div>
 </div>

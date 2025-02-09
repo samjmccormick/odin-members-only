@@ -25,3 +25,26 @@ body {
   color: antiquewhite;
   border-radius: 10px;
 }
+
+#timestamp {
+  font-size: small !important;
+}
+
+#sign-up {
+  background-color: #181818;
+  color: antiquewhite;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.form-text {
+  color: rgb(167, 167, 167) !important;
+}
+
+#user {
+  min-width: 160px !important;
+}
+
+.log-out {
+  min-width: 112px !important;
+}
