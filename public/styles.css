@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #3b3b3b !important;
+  min-height: 100vh;
+  color: whitesmoke !important;
+}
+
+#log-in {
+  background-color: #181818;
+  color: antiquewhite;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+#log-in input {
+  margin-left: 2%;
+  margin-right: 2%;
+  max-width: 300px;
+}
+
+#posts {
+  background-color: #181818;
+  color: antiquewhite;
+  border-radius: 10px;
+}
