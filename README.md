@@ -17,6 +17,9 @@ This project is to meet the Members Only project requirement as part of the Node
 
 ## Solution
 
-1. Created ejs pages for each component
-   > index, sign up form, join member form, error, posts,
-2. s
+1. Set up express and passport in app.js
+2. Created ejs pages for each component
+   > index page, sign up form page, join member form page, error page, posts page, new post form page, individual member post, individual non-member post
+3. Created individual routers for each page
+   > indexRouter, joinRouter, postsRouter, and signupRouter
+4.
