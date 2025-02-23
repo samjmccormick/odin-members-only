@@ -15,11 +15,22 @@ This project is to meet the Members Only project requirement as part of the Node
 8. By this point, anyone who comes to the site should be able to see a list of all messages, with the author’s name hidden. Users should be able to sign-up and create messages, but ONLY users that are members should be able to see the author and date of each message. Finally, you should have an Admin user that is able to see everything and also has the ability to delete messages. Obviously this is a silly little app, but the things you are practicing (creating and authenticating users and giving users different abilities and permissions) are things that will be very useful to you!
 9. When you’re satisfied with your work, deploy your project on your chosen PaaS (list of PaaS providers from the Deployment lesson) and share it below!
 
-## Solution
+# Secure Message Board
 
-1. Set up express and passport in app.js
-2. Created ejs pages for each component
-   > index page, sign up form page, join member form page, error page, posts page, new post form page, individual member post, individual non-member post
-3. Created individual routers for each page
-   > indexRouter, joinRouter, postsRouter, and signupRouter
-4.
+A secure message board application with user authentication powered by Passport. Users must log in with verified identities, and sessions remain active until the page is reloaded. Passwords are securely hashed before storage. Access to post authors and the ability to create posts are restricted, requiring users to enter a secret member password.
+
+## Features
+
+- **User Authentication**: Implemented using Passport for secure login.
+- **Session Management**: Users stay logged in until the page is reloaded.
+- **Hashed Passwords**: Ensures security using bcrypt.
+- **Restricted Access**: Only verified members with the secret password can create posts or view post authors.
+- **Post Management**: Users can create and view messages in a secure environment.
+- **Relational Database Storage**: PostgreSQL is used to manage user data and posts.
+
+## Tech Stack
+
+- **Frontend**: HTML, CSS, Bootstrap
+- **Backend**: Node.js, Express, Passport
+- **Database**: PostgreSQL
+- **Authentication**: Passport.js (Local Strategy), bcrypt for password hashing
